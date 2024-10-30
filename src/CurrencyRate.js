@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const CurrencyRate = () => {
     const [rates, setRates] = useState([]);
-    const apiKey = '6196e56f7f2245338ea31eef3f3bc8e8'; // Replace 'YOUR_API_KEY' with the actual API key
+    const apiKey = 'b8370f7635b0422783f0d02a22813a82';
 
     useEffect(() => {
         const fetchRates = async () => {
