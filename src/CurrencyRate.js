@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import env from "react-dotenv";
 
 const CurrencyRate = () => {
     const [rates, setRates] = useState([]);
-    const apiKey = '6196e56f7f2245338ea31eef3f3bc8e8'; // Replace 'YOUR_API_KEY' with the actual API key
+    const apiKey = env.REACT_APP_CURRENCYFREAKS_APIKEY;
 
     useEffect(() => {
         const fetchRates = async () => {
@@ -27,7 +28,7 @@ const CurrencyRate = () => {
             }
         };
         fetchRates();
-    }, []);
+    }, [apiKey]);
 
     return (
         <div style={{ backgroundColor: '#FFA500', padding: '20px', color: '#fff' }}>
