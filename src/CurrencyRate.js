@@ -6,6 +6,7 @@ const CurrencyRate = () => {
     const [rates, setRates] = useState([]);
     const apiKey = env.REACT_APP_CURRENCYFREAKS_APIKEY;
 
+
     useEffect(() => {
         const fetchRates = async () => {
             try {
